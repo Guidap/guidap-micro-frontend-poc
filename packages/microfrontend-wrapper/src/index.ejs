@@ -51,11 +51,11 @@
       "imports": {
         "react": "https://unpkg.com/react@16/umd/react.production.min.js",
         "react-dom": "https://unpkg.com/react-dom@16/umd/react-dom.production.min.js",
-        "@GUIDAP/root-config": "http://localhost:9000/GUIDAP-root-config.js",
-        "@GUIDAP/guidap-nav": "http://localhost:9001/GUIDAP-guidap-nav.js",
-        "@GUIDAP/guidap-login": "http://localhost:9002/js/app.js",
-        "@GUIDAP/guidap-home": "http://localhost:9003/js/app.js",
-        "@GUIDAP/guidap-404": "http://localhost:9004/js/app.js"
+        "@GUIDAP/microfrontend-wrapper": "http://localhost:9000/GUIDAP-microfrontend-wrapper.js",
+        "@GUIDAP/microfrontend-nav": "http://localhost:9001/GUIDAP-microfrontend-nav.js",
+        "microfrontend-login": "http://localhost:9002/js/app.js",
+        "microfrontend-home": "http://localhost:9003/js/app.js",
+        "microfrontend-404": "http://localhost:9004/js/app.js"
       }
     }
   </script>
@@ -86,7 +86,7 @@
 	  </main>
 	</div>
   <script>
-    System.import('@GUIDAP/root-config');
+    System.import('@GUIDAP/microfrontend-wrapper');
   </script>
   <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
 </body>

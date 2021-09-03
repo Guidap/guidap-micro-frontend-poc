@@ -19,10 +19,18 @@ You must have yarn `^1.22` installed in your local environment.
 
 ## Docs
 
-### Projects
+### Microfrontend
 
-* wrapper: the micro-frontend wrapper which glue the different frontend together
-* guidap-login
-* guidap-404
-* guidap-home
-* guidap-nav : navigation links used to navigate between micro-frontend
+Run `yarn start:microfrontend` to start the microfrontend architecture in dev mode (with hot reload).
+
+This command will run all the projects which :
+* Has a name that start with `microfrontend-` in package.json
+* Contains the `start` script in package.json
+
+**Projects :**
+* wrapper (React app): the micro-frontend wrapper which glue the different frontend together
+* nav (React app): navigation links used to navigate between micro-frontend
+* home (Vue app)
+* login (Vue app)
+* 404 (Vue app)
+

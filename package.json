@@ -9,7 +9,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "test": "lerna run test --since master",
-    "start:microfrontend": "lerna run --parallel watch"
+    "start:microfrontend": "lerna run --parallel --scope microfrontend-* start"
   },
   "keywords": [],
   "author": "",

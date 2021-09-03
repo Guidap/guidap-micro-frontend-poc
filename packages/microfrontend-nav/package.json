@@ -1,5 +1,5 @@
 {
-  "name": "@GUIDAP/guidap-nav",
+  "name": "microfrontend-nav",
   "scripts": {
     "start": "webpack-dev-server --port 9001",
     "watch": "yarn start",

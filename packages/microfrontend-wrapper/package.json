@@ -1,5 +1,5 @@
 {
-  "name": "@GUIDAP/root-config",
+  "name": "microfrontend-wrapper",
   "scripts": {
     "start": "webpack-dev-server --mode=development --port 9000 --env.isLocal=true",
     "watch": "yarn start",

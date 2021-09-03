@@ -1,8 +1,8 @@
 import { registerApplication, start, navigateToUrl } from "single-spa";
 
 registerApplication({
-  name: "@GUIDAP/guidap-login",
-  app: () => System.import("@GUIDAP/guidap-login"),
+  name: "microfrontend-login",
+  app: () => System.import("microfrontend-login"),
   activeWhen: "/login", // localhost:9000/page1 redirige vers le micro-front-end vue
 	customProps: {
     domElement: document.getElementById("micro-front-ends-container"),
@@ -10,8 +10,8 @@ registerApplication({
 });
 
 registerApplication({
-  name: "@GUIDAP/guidap-home",
-  app: () => System.import("@GUIDAP/guidap-home"),
+  name: "microfrontend-home",
+  app: () => System.import("microfrontend-home"),
   activeWhen: [(location) => location.pathname === '/', '/home'],
 	customProps: {
     domElement: document.getElementById("micro-front-ends-container"),
@@ -19,8 +19,8 @@ registerApplication({
 });
 
 registerApplication({
-  name: "@GUIDAP/guidap-nav",
-  app: () => System.import("@GUIDAP/guidap-nav"),
+  name: "@GUIDAP/microfrontend-nav",
+  app: () => System.import("@GUIDAP/microfrontend-nav"),
   activeWhen: "/",
 	customProps: {
     domElement: document.getElementById("nav-container"),
@@ -28,8 +28,8 @@ registerApplication({
 });
 
 registerApplication({
-  name: "@GUIDAP/404",
-  app: () => System.import("@GUIDAP/guidap-404"),
+  name: "microfrontend-404",
+  app: () => System.import("microfrontend-404"),
   activeWhen: "/404",
 	customProps: {
     domElement: document.getElementById("micro-front-ends-container"),
@@ -37,7 +37,7 @@ registerApplication({
 });
 
 window.addEventListener('single-spa:routing-event', (evt) => {
-  if (evt.detail.appsByNewStatus.MOUNTED.length === 1 && evt.detail.appsByNewStatus.MOUNTED[0] === '@GUIDAP/guidap-nav') {
+  if (evt.detail.appsByNewStatus.MOUNTED.length === 1 && evt.detail.appsByNewStatus.MOUNTED[0] === '@GUIDAP/microfrontend-nav') {
     navigateToUrl('/404')
   }
 });

@@ -6,7 +6,7 @@ module.exports = (webpackConfigEnv, argv) => {
   const orgName = "GUIDAP";
   const defaultConfig = singleSpaDefaults({
     orgName,
-    projectName: "root-config",
+    projectName: "microfrontend-wrapper",
     webpackConfigEnv,
     argv,
     disableHtmlGeneration: true,

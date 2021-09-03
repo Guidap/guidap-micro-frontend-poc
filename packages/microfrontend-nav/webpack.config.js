@@ -4,7 +4,7 @@ const singleSpaDefaults = require("webpack-config-single-spa-react-ts");
 module.exports = (webpackConfigEnv, argv) => {
   const defaultConfig = singleSpaDefaults({
     orgName: "GUIDAP",
-    projectName: "guidap-nav",
+    projectName: "microfrontend-nav",
     webpackConfigEnv,
     argv,
   });
